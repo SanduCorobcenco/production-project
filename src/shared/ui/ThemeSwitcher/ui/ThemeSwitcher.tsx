@@ -6,7 +6,7 @@ import { Button, ThemeButton } from 'shared/ui/Button/Button'
 
 interface ThemeSwitcherProps {
 
-  className: string
+  className?: any
 
 }
 

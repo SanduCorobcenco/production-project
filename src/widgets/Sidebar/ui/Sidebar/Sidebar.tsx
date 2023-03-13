@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { ThemeSwitcher } from 'shared/ui/ThemeSwitcher'
 interface SidebarProps {
 
-  className: string
+  className?: any
 
 }
 

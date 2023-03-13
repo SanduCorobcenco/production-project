@@ -11,6 +11,7 @@
       "paths": {
         "*": ["./src/*"]
       },
+      "strictFunctionTypes": true,
       "strictNullChecks": true,
       "strict":true,
       "esModuleInterop": true,
@@ -23,7 +24,8 @@
     },
     "ts-node": {
         "compilerOptions": {
-          "module": "CommonJS"
+          "module": "CommonJS",
+          "jsx": "react-jsx"
         }
       }
   }
