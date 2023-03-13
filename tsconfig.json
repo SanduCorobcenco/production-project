@@ -11,6 +11,8 @@
       "paths": {
         "*": ["./src/*"]
       },
+      "strictNullChecks": true,
+      "strict":true,
       "esModuleInterop": true,
       "allowSyntheticDefaultImports":true,
       
