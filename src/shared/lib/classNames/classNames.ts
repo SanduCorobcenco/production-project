@@ -3,7 +3,8 @@ const obj: Mods = {
   hovered: false
 }
 
-export function classNames (cls: string, mods: Mods = {}, additional: string[] = []): string {
+export function classNames (cls: string, mods: Mods = {},
+  additional: string[] = []): string {
   return [
     cls,
     ...additional.filter(Boolean),
@@ -14,4 +15,5 @@ export function classNames (cls: string, mods: Mods = {}, additional: string[] =
     .join(' ')
 }
 
-classNames('remove-btn', { hovered: true, selectable: true, red: true }, ['pdg'])
+classNames('remove-btn',
+  { hovered: true, selectable: true, red: true }, ['pdg'])
