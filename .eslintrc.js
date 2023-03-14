@@ -39,7 +39,9 @@ module.exports = {
     '@typescript-eslint/ban-ts-comment': 'warn',
     '@typescript-eslint/no-unused-vars': 'warn',
     '@typescript-eslint/naming-convention': 'off',
-    'max-len': ['error', {"ignoreComments" : true}]
+    'max-len': ['error', {"ignoreComments" : true}],
+  
+    
 
 
 

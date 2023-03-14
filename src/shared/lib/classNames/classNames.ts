@@ -1,10 +1,7 @@
 type Mods = Record<string, boolean | string>
-const obj: Mods = {
-  hovered: false
-}
 
 export function classNames (cls: string, mods: Mods = {},
-  additional: string[] = []): string {
+  additional: string[] = []): string | undefined {
   return [
     cls,
     ...additional.filter(Boolean),
