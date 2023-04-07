@@ -7,4 +7,3 @@ on:
 
 jobs:
   pipeline:
-  runs-on: ubuntu-latest
