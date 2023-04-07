@@ -5,7 +5,8 @@ module.exports = {
     jest: true
   },
   extends: ['plugin:react/recommended', 'standard-with-typescript', 'plugin:storybook/recommended'],
-  overrides: [],
+  overrides: [
+  ],
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
