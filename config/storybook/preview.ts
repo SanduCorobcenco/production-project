@@ -1,4 +1,5 @@
 import 'app/styles/index.scss';
+import 'loki/configure-react'
 
 
 export const parameters = {
