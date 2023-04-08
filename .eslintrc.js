@@ -6,11 +6,12 @@ module.exports = {
   },
   extends: ['plugin:react/recommended', 'standard-with-typescript', 'plugin:storybook/recommended'],
   overrides: [
+
   ],
   parserOptions: {
     ecmaVersion: 'latest',
-    sourceType: 'module',
-   
+    sourceType: 'module'
+
   },
   plugins: ['react'],
   rules: {
@@ -31,16 +32,16 @@ module.exports = {
     'import/no-extraneous-dependencies': 'off',
     'no-underscore-dangle': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
-    '@typescript-eslint/strict-boolean-expressions': 'warn',
+    '@typescript-eslint/strict-boolean-expressions': 'off',
     '@typescript-eslint/ban-ts-comment': 'warn',
     '@typescript-eslint/no-unused-vars': 'warn',
     '@typescript-eslint/naming-convention': 'off',
     'max-len': ['error', {
-      "ignoreComments": true,
+      ignoreComments: true,
       code: 100
     }]
   },
   globals: {
     __IS_DEV__: true
   }
-};
+}
