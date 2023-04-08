@@ -6,18 +6,15 @@ const meta: Meta<typeof PageError> = {
   title: 'widget/PageError',
   component: PageError,
   argTypes: {
-    
+
   }
 }
-
 
 type Story = StoryObj<typeof PageError>
 
 export const Light: Story = {
-    render: () => <PageError  />
-   
-}
-  
-  export default meta
+  render: () => <PageError />
 
- 
+}
+
+export default meta

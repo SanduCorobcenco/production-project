@@ -7,28 +7,24 @@ const meta: Meta<typeof Navbar> = {
   title: 'widget/Navbar',
   component: Navbar,
   argTypes: {
-    
+
   }
 }
-
 
 type Story = StoryObj<typeof Navbar>
 
 export const Light: Story = {
-    render: () => 
-    <BrowserRouter>
-    <Navbar />
-    </BrowserRouter>
+  render: () =>
+      <BrowserRouter>
+          <Navbar />
+      </BrowserRouter>
 }
 
-
 export const Dark: Story = {
-    render: () => 
-    <BrowserRouter>
-    <Navbar />
-    </BrowserRouter>
-  }
-  
-  export default meta
+  render: () =>
+      <BrowserRouter>
+          <Navbar />
+      </BrowserRouter>
+}
 
- 
+export default meta

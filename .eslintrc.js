@@ -1,5 +1,3 @@
-const { off } = require("process");
-
 module.exports = {
   env: {
     browser: true,
@@ -17,9 +15,9 @@ module.exports = {
   },
   plugins: ['react'],
   rules: {
-     'react/jsx-indent': off,
-     'react/jsx-indent-props': off,
-    'indent': off,
+    'react/jsx-indent': [2, 4],
+    'react/jsx-indent-props': [2, 4],
+    
     'react/jsx-filename-extension': [2, {
       extensions: ['.js', '.jsx', '.tsx']
     }],
@@ -39,6 +37,7 @@ module.exports = {
     '@typescript-eslint/ban-ts-comment': 'warn',
     '@typescript-eslint/no-unused-vars': 'warn',
     '@typescript-eslint/naming-convention': 'off',
+    
     'max-len': ['error', {
       ignoreComments: true,
       code: 100

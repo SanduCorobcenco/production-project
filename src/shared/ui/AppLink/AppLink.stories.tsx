@@ -1,48 +1,43 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { AppLink } from './AppLink'
+import { AppLink, AppLinkTheme } from './AppLink'
 import { BrowserRouter } from 'react-router-dom'
-import {AppLinkTheme} from './AppLink'
 
 const meta: Meta<typeof AppLink> = {
 
   title: 'shared/AppLink',
   component: AppLink,
   argTypes: {
-   
+
   },
   args: {
-    to: '/',
+    to: '/'
   }
 }
-
 
 type Story = StoryObj<typeof AppLink>
 
 export const Primary: Story = {
-    render: () => 
-    <BrowserRouter>
-    <AppLink 
-    to='/' 
-    children='text '
-    theme={AppLinkTheme.PRIMARY}
+  render: () =>
+      <BrowserRouter>
+          <AppLink
+              to='/'
+              children='text '
+              theme={AppLinkTheme.PRIMARY}
     />
-    </BrowserRouter>
-   
-}
+      </BrowserRouter>
 
+}
 
 export const Secondary: Story = {
-    render: () => 
-    <BrowserRouter>
-    <AppLink 
-    to='/' 
-    children='text '
-    theme={AppLinkTheme.SECONDARY}
+  render: () =>
+      <BrowserRouter>
+          <AppLink
+              to='/'
+              children='text '
+              theme={AppLinkTheme.SECONDARY}
     />
-    </BrowserRouter>
-   
-}
-  
-  export default meta
+      </BrowserRouter>
 
- 
+}
+
+export default meta
