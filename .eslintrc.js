@@ -36,6 +36,7 @@ module.exports = {
     '@typescript-eslint/ban-ts-comment': 'warn',
     '@typescript-eslint/no-unused-vars': 'warn',
     '@typescript-eslint/naming-convention': 'off',
+    ' @typescript-eslint/dot-notation': 'off',
     'max-len': ['error', {
       ignoreComments: true,
       code: 100
