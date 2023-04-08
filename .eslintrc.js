@@ -32,11 +32,10 @@ module.exports = {
     'import/no-extraneous-dependencies': 'off',
     'no-underscore-dangle': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
-    '@typescript-eslint/strict-boolean-expressions': 'off',
+    '@typescript-eslint/strict-boolean-expressions': 'warn',
     '@typescript-eslint/ban-ts-comment': 'warn',
     '@typescript-eslint/no-unused-vars': 'warn',
     '@typescript-eslint/naming-convention': 'off',
-    ' @typescript-eslint/dot-notation': 'off',
     'max-len': ['error', {
       ignoreComments: true,
       code: 100
