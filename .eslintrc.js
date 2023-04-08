@@ -43,6 +43,7 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': 'warn',
     '@typescript-eslint/naming-convention': 'off',
     'react/jsx-uses-react': 'off',
+    '@typescript-eslint/strict-boolean-expressions': 0,
     'react/prop-types': 'off',
     'max-len': ['error', {
       ignoreComments: true,
