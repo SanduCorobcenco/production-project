@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkproduction_folder=self.webpackChunkproduction_folder||[]).push([[221],{221:(e,r,u)=>{u.r(r),u.d(r,{default:()=>o});var n=u(893);const o=function(){return(0,n.jsx)("div",{children:"About Page"})}}}]);
