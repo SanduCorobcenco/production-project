@@ -14,6 +14,7 @@ export default meta
 type Story = StoryObj<typeof Button>
 
 export const Primary: Story = {
+  // eslint-disable-next-line react/no-children-prop
   render: () => <Button children ='text' />
 
 }
@@ -24,6 +25,7 @@ export const Clear: Story = {
 
 export const Outline: Story = {
   render: () => <Button
+      // eslint-disable-next-line react/no-children-prop
       children = 'text'
       theme = 'outline'
     />

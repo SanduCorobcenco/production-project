@@ -21,6 +21,7 @@ export const Primary: Story = {
       <BrowserRouter>
           <AppLink
               to='/'
+              // eslint-disable-next-line react/no-children-prop
               children='text '
               theme={AppLinkTheme.PRIMARY}
     />
@@ -33,6 +34,7 @@ export const Secondary: Story = {
       <BrowserRouter>
           <AppLink
               to='/'
+              // eslint-disable-next-line react/no-children-prop
               children='text '
               theme={AppLinkTheme.SECONDARY}
     />
