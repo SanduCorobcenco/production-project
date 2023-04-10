@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { Navbar } from './Navbar'
 import { BrowserRouter } from 'react-router-dom'
+import { ButtonTheme } from 'shared/ui/Button/Button'
 
 const meta: Meta<typeof Navbar> = {
 
@@ -25,6 +26,13 @@ export const Dark: Story = {
       <BrowserRouter>
           <Navbar />
       </BrowserRouter>
+}
+
+export const ClearInverted: Story = {
+  args: {
+    children: 'text',
+    theme: ButtonTheme.CLEAR_INVERTED
+  }
 }
 
 export default meta

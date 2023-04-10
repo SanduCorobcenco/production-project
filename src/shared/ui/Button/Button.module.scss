@@ -67,3 +67,10 @@
 .size_xl {
     font: var(--font-xl);
 }
+
+.clearInverted {
+    border: none;
+    background: none;
+    outline: none;
+    color: var(--inverted-primary-color);
+}

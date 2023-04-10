@@ -19,10 +19,16 @@ module.exports = {
 
   },
 
-  plugins: ['react'],
+  plugins: [
+    'react',
+    '@typescript-eslint',
+    'react-hooks'
+  ],
   rules: {
     'react/jsx-indent': [2, 4],
     'react/jsx-indent-props': [2, 4],
+    'react-hooks/rules-of-hooks': 'error', // Checks rules of Hooks
+    'react-hooks/exhaustive-deps': 'error', // Checks effect dependencies
 
     'react/jsx-filename-extension': [2, {
       extensions: ['.js', '.jsx', '.tsx']
@@ -45,6 +51,8 @@ module.exports = {
     'react/jsx-uses-react': 'off',
     '@typescript-eslint/strict-boolean-expressions': 0,
     'react/prop-types': 'off',
+    'jsx-ally/no-static-element-interactions': 'off',
+    'jsx-ally/click-events-have-key-events': 'off',
     'max-len': ['error', {
       ignoreComments: true,
       code: 100
