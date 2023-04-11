@@ -1,3 +1,4 @@
+//eslint-disable
 .Modal {
     position: fixed;
     top: 0;
@@ -10,7 +11,6 @@
     color: var(--primary-color)
     
 }
-
 
 .overlay {
     width: 100%;
@@ -50,3 +50,4 @@
         transform: scale(0.2)
     }
 }
+
