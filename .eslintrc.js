@@ -8,9 +8,17 @@ module.exports = {
   overrides: [
 
   ],
+  parser: '@typescript-eslint/parser',
 
   parserOptions: {
     ecmaVersion: 'latest',
+    requireConfigFile: false,
+    babelOptions: {
+      babelrc: false,
+      configFile: false,
+      // your babel options
+      presets: ['@babel/preset-env']
+    },
     sourceType: 'module',
     project: './tsconfig.json',
     ecmaFeatures: {
@@ -23,13 +31,14 @@ module.exports = {
     'react',
     '@typescript-eslint',
     'react-hooks'
+
   ],
   rules: {
     'react/jsx-indent': [2, 4],
     'react/jsx-indent-props': [2, 4],
     'react-hooks/rules-of-hooks': 'error', // Checks rules of Hooks
     'react-hooks/exhaustive-deps': 'error', // Checks effect dependencies
-
+    // recommended rules
     'react/jsx-filename-extension': [2, {
       extensions: ['.js', '.jsx', '.tsx']
     }],
