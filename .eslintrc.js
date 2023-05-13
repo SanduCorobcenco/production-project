@@ -30,7 +30,8 @@ module.exports = {
   plugins: [
     'react',
     '@typescript-eslint',
-    'react-hooks'
+    'react-hooks',
+    'javascript'
 
   ],
   rules: {

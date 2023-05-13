@@ -36,7 +36,10 @@
       "./src/**/*.tsx",
       "./src/**/*.scss",
       ".eslintrc.js",
-      "webpack.config.ts"
+      "webpack.config.ts",
+      "./json-server/**/*.json",
+      "./json-server/**/*.js",
+      "./json-server/index.js"
 
 
     ]
