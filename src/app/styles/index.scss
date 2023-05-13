@@ -3,10 +3,13 @@
 @import "themes/normal.scss";
 @import "themes/dark.scss";
 
-.body {
+
+
+body{
     font: var(--font-m);
     color: var(--primary-color);
 }
+
 
 .app {
     background: var(--bg-color);
