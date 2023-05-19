@@ -1,6 +1,7 @@
 import {classNames} from 'shared/lib/classNames/classNames';
 import cls from './LoginForm.module.scss'
 import { Button } from 'shared/ui/Button/Button';
+import { Input } from 'shared/ui/Input/Input';
  
 interface LoginFormProps {
  
@@ -14,8 +15,17 @@ export const LoginForm = ({className}: LoginFormProps) => {
  
  
 <div className={classNames(cls.LoginForm, {}, [className])}>
- <input type='text'className={cls.input} />
- <input type='text'className={cls.input} />
+ <Input
+      autofocus 
+      type='text'
+      className={cls.input} 
+      placeholder={"username"}
+      />
+ <Input 
+      type='text'
+      className={cls.input} 
+      placeholder={"password"}
+      />
  <Button
     className={cls.loginBtn}
  >
