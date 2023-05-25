@@ -37,6 +37,12 @@
       "./src/**/*.scss",
       ".eslintrc.js",
       "webpack.config.ts",
+      "./config/storybook/webpack.config.ts",
+      "./config/storybook/preview.ts",
+      "./config/storybook/main.ts",
+      "./config/jest/jestEmptyComponent.tsx",
+      "./config/jest/jest.config.ts",
+
      
 
      

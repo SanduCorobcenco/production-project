@@ -21,8 +21,6 @@ export const Navbar = ({ className }: NavbarProps) => {
     setIsAuthModal(true)
   }, [])
 
-
-
   return (
       <div className={classNames(cls.Navbar, {}, [className])}>
 
@@ -31,12 +29,12 @@ export const Navbar = ({ className }: NavbarProps) => {
               className={cls.links}
               onClick={onShowModal}
           > {'Login'}
-              </Button>
+          </Button>
 
           <LoginModal
-              isOpen={isAuthModal} 
+              isOpen={isAuthModal}
               onClose={onCloseModal}
-          
+
           />
 
       </div>
