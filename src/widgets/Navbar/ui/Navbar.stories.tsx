@@ -1,38 +1,32 @@
-import type { Meta, StoryObj } from '@storybook/react'
-import { Navbar } from './Navbar'
-import { BrowserRouter } from 'react-router-dom'
-import { ButtonTheme } from 'shared/ui/Button/Button'
+import React from 'react';
+import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-const meta: Meta<typeof Navbar> = {
+import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
+import { Theme } from 'app/providers/ThemeProvider';
+import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
+import { Navbar } from './Navbar';
 
-  title: 'widget/Navbar',
-  component: Navbar,
-  argTypes: {
+export default {
+    title: 'widget/Navbar',
+    component: Navbar,
+    argTypes: {
+        backgroundColor: { control: 'color' },
+    },
+} as ComponentMeta<typeof Navbar>;
 
-  }
-}
+const Template: ComponentStory<typeof Navbar> = (args) => <Navbar {...args} />;
 
-type Story = StoryObj<typeof Navbar>
+export const Light = Template.bind({});
+Light.args = {};
+Light.decorators = [StoreDecorator({
 
-export const Light: Story = {
-  render: () =>
-      <BrowserRouter>
-          <Navbar />
-      </BrowserRouter>
-}
+})];
+export const Dark = Template.bind({});
+Dark.args = {};
+Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({})];
 
-export const Dark: Story = {
-  render: () =>
-      <BrowserRouter>
-          <Navbar />
-      </BrowserRouter>
-}
-
-export const ClearInverted: Story = {
-  args: {
-    children: 'text',
-    theme: ButtonTheme.CLEAR_INVERTED
-  }
-}
-
-export default meta
+export const AuthNavbar = Template.bind({});
+AuthNavbar.args = {};
+AuthNavbar.decorators = [StoreDecorator({
+    user: { authData: {} },
+})];

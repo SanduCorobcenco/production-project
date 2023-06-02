@@ -1,29 +1,27 @@
 .Sidebar {
-    height: 100vh;
+    height: calc(100vh - var(--navbar-height));
     width: var(--sidebar-width);
     background: var(--inverted-bg-color);
     position: relative;
-    transition: width 0.3s ease-in-out;
+    transition: width 0.3s;
 }
-
 
 .switchers {
     position: absolute;
-    bottom: 70px;
+    bottom: 20px;
     display: flex;
     justify-content: center;
     width: 100%;
 }
 
+.lang {
+    margin-left: 20px;
+}
 
-
-
-
-.collapsedBtn{
+.collapseBtn {
     position: absolute;
     right: -32px;
     bottom: 32px;
-
 }
 
 .items {
@@ -33,23 +31,20 @@
     flex-direction: column;
 }
 
-
-.link {
-    margin-left: 10px;
-    opacity: 1;
-}
-
 .item {
     margin-top: 10px;
     display: flex;
     align-items: center;
 }
 
+.link {
+    margin-left: 10px;
+    opacity: 1;
+}
+
 .icon {
     fill: var(--inverted-primary-color);
 }
-
-
 
 .collapsed {
     width: var(--sidebar-width-collapsed);
@@ -58,6 +53,11 @@
         flex-direction: column;
         align-items: center;
     }
+
+    .lang {
+        margin-left: 0;
+    }
+
     .link {
         opacity: 0;
         transition: 0.2s opacity;

@@ -1,21 +1,18 @@
-import { useState } from 'react'
-import { Input } from 'shared/ui/Input/Input'
+import React, { useState } from 'react';
+import { Input } from 'shared/ui/Input/Input';
 
 const MainPage = () => {
-  const [value, setValue] = useState('')
-  const onChangeHandler = (value: string) => {
-    setValue(value)
-  }
+    const [value, setValue] = useState('');
 
-  return (
-      <div>
+    const onChange = (val: string) => {
+        setValue(val);
+    };
 
-          <Input
-              placeholder="Enter your name"
-              value={value}
-              onChange={onChangeHandler}/>
-      </div>
-  )
-}
+    return (
+        <div>
+            Main Page
+        </div>
+    );
+};
 
-export default MainPage
+export default MainPage;

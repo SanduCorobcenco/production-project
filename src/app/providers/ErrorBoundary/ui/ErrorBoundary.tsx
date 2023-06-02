@@ -1,45 +1,46 @@
-import React, { Suspense, type ErrorInfo } from 'react'
-import { PageError } from 'widgets/PageError/ui/PageError'
+import React, { ErrorInfo, ReactNode, Suspense } from 'react';
+import { ErrorPage } from 'widgets/ErrorPage/ui/ErrorPage';
 
 interface ErrorBoundaryProps {
-  children: React.ReactNode
+    children: ReactNode;
 }
 
 interface ErrorBoundaryState {
-  hasError: boolean
+    hasError: boolean;
 }
 
-class ErrorBoundary extends
-  React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
-  constructor (props: ErrorBoundaryProps) {
-    super(props)
-    this.state = { hasError: false }
-  }
-
-  static getDerivedStateFromError (error: Error) {
-    if (error) {
-      return { hasError: true }
+class ErrorBoundary
+    extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
+    constructor(props: ErrorBoundaryProps) {
+        super(props);
+        this.state = { hasError: false };
     }
-  }
 
-  componentDidCatch (error: Error, errorInfo: ErrorInfo) {
-    // You can also log the error to an error reporting service
-    console.log(error, errorInfo)
-  }
-
-  render () {
-    const { hasError } = this.state
-    const { children } = this.props
-    if (hasError) {
-      return (
-          <Suspense fallback={''}>
-              <PageError />
-          </Suspense>
-
-      )
+    static getDerivedStateFromError(error: Error) {
+        // Update state so the next render will show the fallback UI.
+        return { hasError: true };
     }
-    return children
-  }
+
+    componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+        // You can also log the error to an error reporting service
+        console.log(error, errorInfo);
+    }
+
+    render() {
+        const { hasError } = this.state;
+        const { children } = this.props;
+
+        if (hasError) {
+            // You can render any custom fallback UI
+            return (
+                <Suspense fallback="">
+                    <ErrorPage />
+                </Suspense>
+            );
+        }
+
+        return children;
+    }
 }
 
-export default ErrorBoundary
+export default ErrorBoundary;

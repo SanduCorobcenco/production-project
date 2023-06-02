@@ -1,8 +1,4 @@
-import { StoryFn, type StoryObj } from '@storybook/react'
-import { type Button } from 'shared/ui/Button/Button'
-import 'app/styles/index.scss'
+import 'app/styles/index.scss';
+import { Story } from '@storybook/react';
 
-type Story = StoryObj<typeof Button>
-export const StyleDecorator = {
-
-}
+export const StyleDecorator = (story: () => Story) => story();

@@ -1,29 +1,23 @@
+import { Button } from 'shared/ui/Button/Button';
+import { useEffect, useState } from 'react';
 
-import { Button } from 'shared/ui/Button/Button'
-import { useEffect, useState } from 'react'
-
-// Element for texting
-
+// Компонент для тестирования ErrorBoundary
 export const BugButton = () => {
-  const [error, setError] = useState(false)
-  const throwErr = () => {
-    setError(true)
-  }
+    const [error, setError] = useState(false);
 
-  useEffect(() => {
-    if (error) {
-      throw new Error()
-    }
-  }, [error])
+    const onThrow = () => setError(true);
 
-  return (
+    useEffect(() => {
+        if (error) {
+            throw new Error();
+        }
+    }, [error]);
 
-      <Button
-          onClick={throwErr}
-          >
-
-          throw Error
-      </Button>
-
-  )
-}
+    return (
+        <Button
+            onClick={onThrow}
+        >
+            throw error
+        </Button>
+    );
+};
